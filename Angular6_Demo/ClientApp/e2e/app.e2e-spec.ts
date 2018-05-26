@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('App', () => {
+describe('test-ng4 App', () => {
   let page: AppPage;
 
   beforeEach(() => {
@@ -9,6 +9,6 @@ describe('App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getMainHeading()).toEqual('Hello, world!');
+    expect(page.getParagraphText()).toEqual('SB Admin BS4 Angular5');
   });
 });

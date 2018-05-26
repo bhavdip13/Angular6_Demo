@@ -15,6 +15,10 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.0-preview1-final" />
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="2.1.0-preview1-final" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.0-preview1-final" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.1.0-preview1-final" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.0-preview1-final" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="2.4.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,6 +29,39 @@
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
     <Content Remove="$(SpaRoot)**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="ClientApp\angular.json" />
+    <Content Include="ClientApp\dist\assets\i18n\de.json" />
+    <Content Include="ClientApp\dist\assets\i18n\en.json" />
+    <Content Include="ClientApp\dist\assets\i18n\es.json" />
+    <Content Include="ClientApp\dist\assets\i18n\fa.json" />
+    <Content Include="ClientApp\dist\assets\i18n\fr.json" />
+    <Content Include="ClientApp\dist\assets\i18n\it.json" />
+    <Content Include="ClientApp\dist\assets\i18n\ur.json" />
+    <Content Include="ClientApp\dist\assets\i18n\zh-CHS.json" />
+    <Content Include="ClientApp\e2e\tsconfig.e2e.json" />
+    <Content Include="ClientApp\package.json" />
+    <Content Include="ClientApp\src\assets\i18n\de.json" />
+    <Content Include="ClientApp\src\assets\i18n\en.json" />
+    <Content Include="ClientApp\src\assets\i18n\es.json" />
+    <Content Include="ClientApp\src\assets\i18n\fa.json" />
+    <Content Include="ClientApp\src\assets\i18n\fr.json" />
+    <Content Include="ClientApp\src\assets\i18n\it.json" />
+    <Content Include="ClientApp\src\assets\i18n\ur.json" />
+    <Content Include="ClientApp\src\assets\i18n\zh-CHS.json" />
+    <Content Include="ClientApp\src\tsconfig.app.json" />
+    <Content Include="ClientApp\src\tsconfig.spec.json" />
+    <Content Include="ClientApp\tsconfig.json" />
+    <Content Include="ClientApp\tslint.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Angular6_Demo_BusinessAccessLayer\Angular6_Demo_BusinessAccessLayer.csproj" />
+    <ProjectReference Include="..\Angular6_Demo_BusinessObjects\Angular6_Demo_BusinessObjects.csproj" />
+    <ProjectReference Include="..\Angular6_Demo_DataAccessLayer\Angular6_Demo_DataAccessLayer.csproj" />
+    <ProjectReference Include="..\Angular6_Demo_Entitys\Angular6_Demo_Entitys.csproj" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
